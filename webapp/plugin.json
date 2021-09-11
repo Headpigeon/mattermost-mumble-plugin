@@ -1,0 +1,7 @@
+{
+  "id": "net.freakbase.mattermost-mumble-plugin",
+  "name": "Mattermost Mumble Plugin",
+  "webapp": {
+    "bundle_path": "main.js"
+  }
+}

@@ -1,0 +1,127 @@
+:root {
+    /* Mattermost */
+    --mm-sidebar-text-opacity: 0.72;
+    /* Mumble */
+    --mb-red: #ca3d31;
+    --mb-green: #329a4e;
+    --mb-yellow: #fbbc05;
+    --mb-blue: #44a3f2;
+    --mb-purple: #9055a9;
+}
+
+.ellipsisContainer {
+    white-space: nowrap;
+    width: 100% !important;
+}
+
+.ellipsisText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+:global(#SidebarContainer) .pluginContainer :global(.SidebarChannel) :global(.SidebarLink:hover) {
+    padding-right: 16px !important;
+}
+
+:global(#SidebarContainer) {
+    
+    //
+    // Component: MumbleSidebarPlugin
+    //
+
+    .pluginContainer {
+        user-select: none;
+    }
+
+    .toolbar {
+        display: flex;
+        float: right;
+        padding-right: 16px;
+        
+        .toolbarIcon {
+            font-size: 14px;
+            width: 14px;
+            text-align: center;
+            margin-left: 4px;
+
+            &:hover {
+                color: white;
+            }
+        }
+    }
+
+    .iconRed {
+        color: var(--mb-red);
+    }
+
+    .iconGreen {
+        color: var(--mb-green);
+    }
+
+    .iconBlue {
+        color: var(--mb-blue);
+    }
+
+    .iconYellow {
+        color: var(--mb-yellow);
+    }
+
+    .iconPurple {
+        color: var(--mb-purple);
+    }
+
+    //
+    // Component: Spacer
+    //
+
+    .spacer {
+        display: inline-block;
+        height: 12px;
+    }
+
+    //
+    // Component: Channel
+    //
+    
+    .channelHeaderIcon {
+        max-width: 16px;
+    }
+
+    //
+    // Component: User
+    //
+    
+    .currentUser {
+        color: var(--mb-green);
+    }
+
+    .userName {
+        flex-grow: 1;
+    }
+
+    :global(.SidebarChannel) :global(.SidebarLink) {
+
+        .userStateIcon {
+            font-size: 14px;
+            text-align: center;
+            width: 14px;
+            margin-left: 4px;
+            margin-right: 0px;
+        }
+
+        .userStateAutoHideIcon {
+            display: none;
+        }
+
+        .userStateAutoHideIcon.enabled {
+            display: flex;
+        }
+
+        &:hover .userStateIconButton {
+            display: flex;
+            color: white;
+        }
+
+    }
+
+}
